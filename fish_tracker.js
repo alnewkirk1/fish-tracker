@@ -57,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Error loading fish data:", error));
     }
 
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
     function renderFishList(fishData) {
         fishContainer.innerHTML = "";
         const currentMonthFull = getCurrentMonth();
@@ -72,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         table.id = "fish-table";
         const headerRow = document.createElement("tr");
         
-        const headers = ["Fish", "Location", "Time", "Availability", "Donated"];
+        const headers = isMobile() ? ["Fish", "Location", "Donated"] : ["Fish", "Location", "Time", "Availability", "Donated"];
         headers.forEach(header => {
             const th = document.createElement("th");
             th.textContent = header;
@@ -86,15 +90,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
                 const row = document.createElement("tr");
-                row.innerHTML = `
-                    <td>${fish.name}</td>
-                    <td>${fish.location}</td>
-                    <td>${fish.time}</td>
-                    <td>${isLeavingThisMonth(fish) ? "Leaving" : "Available"}</td>
-                    <td>
-                        <input type="checkbox" id="${fish.name}" ${donatedFish.includes(fish.name) ? "checked" : ""}>
-                    </td>
-                `;
+                row.innerHTML = isMobile()
+                    ? `
+                        <td>${fish.name}</td>
+                        <td>${fish.location}</td>
+                        <td>
+                            <input type="checkbox" id="${fish.name}" ${donatedFish.includes(fish.name) ? "checked" : ""}>
+                        </td>
+                    `
+                    : `
+                        <td>${fish.name}</td>
+                        <td>${fish.location}</td>
+                        <td>${fish.time}</td>
+                        <td>${isLeavingThisMonth(fish) ? "Leaving" : "Available"}</td>
+                        <td>
+                            <input type="checkbox" id="${fish.name}" ${donatedFish.includes(fish.name) ? "checked" : ""}>
+                        </td>
+                    `;
                 
                 if (isLeavingThisMonth(fish)) {
                     row.classList.add("leaving-fish");
@@ -117,20 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
         fishContainer.appendChild(table);
-
-        // Add the toggle button back
-        if (!document.getElementById("toggle-button")) {
-            const toggleButton = document.createElement("button");
-            toggleButton.id = "toggle-button";
-            toggleButton.textContent = "Show Only Undonated Fish";
-            toggleButton.addEventListener("click", () => {
-                showOnlyUndonated = !showOnlyUndonated;
-                fetchFishData();
-                toggleButton.textContent = showOnlyUndonated ? "Show All Fish" : "Show Only Undonated Fish";
-            });
-            document.body.insertBefore(toggleButton, fishContainer);
-        }
     }
 
     fetchFishData();
+
+    window.addEventListener("resize", () => renderFishList(fishData));
 });

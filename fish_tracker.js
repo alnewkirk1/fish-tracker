@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const fishList = document.getElementById("fish-list");
+    const fishContainer = document.getElementById("fish-container");
     let donatedFish = JSON.parse(localStorage.getItem("donatedFish")) || [];
+    let showOnlyUndonated = false;
 
     function getCurrentMonth() {
         const date = new Date();
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentHour = getCurrentHour();
         if (fish.time === "All day") return true;
         
-        const timeRanges = fish.time.split(" & "); // Handle cases like "9am - 4pm & 9pm - 4am"
+        const timeRanges = fish.time.split(" & ");
         return timeRanges.some(range => {
             const [start, end] = range.split(" - ").map(t => {
                 let hour = parseInt(t.replace(/\D/g, ""), 10);
@@ -57,8 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderFishList(fishData) {
-        const fishContainer = document.getElementById("fish-container");
-		fishContainer.innerHTML = "";
+        fishContainer.innerHTML = "";
         const currentMonthFull = getCurrentMonth();
         const currentMonthShort = getShortMonth(currentMonthFull);
         console.log("Current Month (Short):", currentMonthShort);
@@ -70,22 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const table = document.createElement("table");
         table.id = "fish-table";
-        table.innerHTML = `
-            <tr>
-                <th>Fish</th>
-                <th>Location</th>
-                <th>Time</th>
-                <th>Available</th>
-                <th>Donated</th>
-            </tr>
-        `;
+        const headerRow = document.createElement("tr");
+        
+        const headers = ["Fish", "Location", "Time", "Availability", "Donated"];
+        headers.forEach(header => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
         
         fishData.forEach(fish => {
             if (fish.months_available.includes(currentMonthShort) && isFishAvailableNow(fish)) {
-                const row = document.createElement("tr");
-                if (isLeavingThisMonth(fish)) {
-                    row.classList.add("leaving-fish");
+                if (showOnlyUndonated && donatedFish.includes(fish.name)) {
+                    return;
                 }
+                const row = document.createElement("tr");
                 row.innerHTML = `
                     <td>${fish.name}</td>
                     <td>${fish.location}</td>
@@ -95,6 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         <input type="checkbox" id="${fish.name}" ${donatedFish.includes(fish.name) ? "checked" : ""}>
                     </td>
                 `;
+                
+                if (isLeavingThisMonth(fish)) {
+                    row.classList.add("leaving-fish");
+                }
 
                 row.querySelector("input").addEventListener("change", (event) => {
                     if (event.target.checked) {
@@ -113,20 +117,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
         fishContainer.appendChild(table);
-    }
 
-    function resetDonatedFish() {
-        donatedFish = [];
-        localStorage.removeItem("donatedFish");
-        fetchFishData();
-    }
-
-    if (!document.getElementById("reset-button")) {
-        const resetButton = document.createElement("button");
-        resetButton.id = "reset-button";
-        resetButton.textContent = "Reset Donated Fish";
-        resetButton.addEventListener("click", resetDonatedFish);
-        document.body.insertBefore(resetButton, fishList);
+        // Add the toggle button back
+        if (!document.getElementById("toggle-button")) {
+            const toggleButton = document.createElement("button");
+            toggleButton.id = "toggle-button";
+            toggleButton.textContent = "Show Only Undonated Fish";
+            toggleButton.addEventListener("click", () => {
+                showOnlyUndonated = !showOnlyUndonated;
+                fetchFishData();
+                toggleButton.textContent = showOnlyUndonated ? "Show All Fish" : "Show Only Undonated Fish";
+            });
+            document.body.insertBefore(toggleButton, fishContainer);
+        }
     }
 
     fetchFishData();

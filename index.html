@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="fish_tracker_styles.css">
     <title>Animal Crossing Fish Tracker</title>
+    <link rel="stylesheet" href="fish_tracker_styles.css">
 </head>
 <body>
-	<h1>Animal Crossing Fish Tracker</h1>
-	<ul id="fish-list"></ul>
-	<script src="fish_tracker.js"></script>
+    <h1>Animal Crossing Fish Tracker</h1>
+    <button id="reset-button">Reset Donated Fish</button>
+    <div id="fish-container">
+        <table id="fish-table">
+            <thead>
+                <tr>
+                    <th>Fish</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                    <th>Available</th>
+                    <th>Donated</th>
+                </tr>
+            </thead>
+            <tbody id="fish-list"></tbody>
+        </table>
+    </div>
+    <script src="fish_tracker.js"></script>
 </body>
 </html>

@@ -62,31 +62,31 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentMonthShort = getShortMonth(currentMonthFull);
         console.log("Current Month (Short):", currentMonthShort);
 
-        const sortedFish = {};
+        const table = document.createElement("table");
+        table.innerHTML = `
+            <tr>
+                <th>Fish</th>
+                <th>Location</th>
+                <th>Time</th>
+                <th>Available</th>
+                <th>Donated</th>
+            </tr>
+        `;
         
         fishData.forEach(fish => {
-            if (fish.months_available.includes(currentMonthShort) && isFishAvailableNow(fish) && !donatedFish.includes(fish.name)) {
-                if (!sortedFish[fish.location]) {
-                    sortedFish[fish.location] = [];
-                }
-                sortedFish[fish.location].push(fish);
-            }
-        });
-
-        Object.keys(sortedFish).forEach(location => {
-            const locationHeader = document.createElement("h2");
-            locationHeader.textContent = location;
-            fishList.appendChild(locationHeader);
-
-            sortedFish[location].forEach(fish => {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `
-                    <input type="checkbox" id="${fish.name}">
-                    <label for="${fish.name}" class="${isLeavingThisMonth(fish) ? 'leaving' : ''}">
-                        ${fish.name} - ${fish.time}
-                    </label>
+            if (fish.months_available.includes(currentMonthShort) && isFishAvailableNow(fish)) {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${fish.name}</td>
+                    <td>${fish.location}</td>
+                    <td>${fish.time}</td>
+                    <td>${isLeavingThisMonth(fish) ? "Leaving" : "Available"}</td>
+                    <td>
+                        <input type="checkbox" id="${fish.name}" ${donatedFish.includes(fish.name) ? "checked" : ""}>
+                    </td>
                 `;
-                listItem.querySelector("input").addEventListener("change", (event) => {
+
+                row.querySelector("input").addEventListener("change", (event) => {
                     if (event.target.checked) {
                         donatedFish.push(fish.name);
                     } else {
@@ -98,9 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("donatedFish", JSON.stringify(donatedFish));
                     renderFishList(fishData);
                 });
-                fishList.appendChild(listItem);
-            });
+                table.appendChild(row);
+            }
         });
+        
+        fishList.appendChild(table);
     }
 
     function resetDonatedFish() {

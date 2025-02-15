@@ -57,12 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderFishList(fishData) {
-        fishList.innerHTML = "";
+        const fishContainer = document.getElementById("fish-container");
+		fishContainer.innerHTML = "";
         const currentMonthFull = getCurrentMonth();
         const currentMonthShort = getShortMonth(currentMonthFull);
         console.log("Current Month (Short):", currentMonthShort);
 
+        const existingTable = document.querySelector("#fish-table");
+        if (existingTable) {
+            existingTable.remove();
+        }
+
         const table = document.createElement("table");
+        table.id = "fish-table";
         table.innerHTML = `
             <tr>
                 <th>Fish</th>
@@ -76,6 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         fishData.forEach(fish => {
             if (fish.months_available.includes(currentMonthShort) && isFishAvailableNow(fish)) {
                 const row = document.createElement("tr");
+                if (isLeavingThisMonth(fish)) {
+                    row.classList.add("leaving-fish");
+                }
                 row.innerHTML = `
                     <td>${fish.name}</td>
                     <td>${fish.location}</td>
@@ -102,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
         
-        fishList.appendChild(table);
+        fishContainer.appendChild(table);
     }
 
     function resetDonatedFish() {
@@ -111,11 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fetchFishData();
     }
 
-    if (fishList) {
+    if (!document.getElementById("reset-button")) {
         const resetButton = document.createElement("button");
+        resetButton.id = "reset-button";
         resetButton.textContent = "Reset Donated Fish";
         resetButton.addEventListener("click", resetDonatedFish);
-        fishList.parentNode.insertBefore(resetButton, fishList);
+        document.body.insertBefore(resetButton, fishList);
     }
 
     fetchFishData();

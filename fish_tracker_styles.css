@@ -69,3 +69,8 @@ button:hover {
     font-weight: bold;
     color: red;
 }
+
+.leaving-fish {
+    background-color: #ffcccc; /* Light red background */
+    font-weight: bold;
+}

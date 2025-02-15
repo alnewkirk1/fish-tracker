@@ -1,0 +1,1184 @@
+[
+    {
+        "name": "Bitterling",
+        "location": "River",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Pale chub",
+        "location": "River",
+        "shadow_size": 1,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Crucian carp",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Dace",
+        "location": "River",
+        "shadow_size": 3,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Carp",
+        "location": "Pond",
+        "shadow_size": 4,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Koi",
+        "location": "Pond",
+        "shadow_size": 4,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Goldfish",
+        "location": "Pond",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Pop-eyed goldfish",
+        "location": "Pond",
+        "shadow_size": 1,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Ranchu goldfish",
+        "location": "Pond",
+        "shadow_size": 2,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Killifish",
+        "location": "Pond",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug"
+        ]
+    },
+    {
+        "name": "Crawfish",
+        "location": "Pond",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Soft-shelled turtle",
+        "location": "River",
+        "shadow_size": 4,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Snapping Turtle",
+        "location": "River",
+        "shadow_size": 4,
+        "time": "9pm - 4am",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Tadpole",
+        "location": "Pond",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul"
+        ]
+    },
+    {
+        "name": "Frog",
+        "location": "Pond",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug"
+        ]
+    },
+    {
+        "name": "Freshwater goby",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Loach",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May"
+        ]
+    },
+    {
+        "name": "Catfish",
+        "location": "Pond",
+        "shadow_size": 4,
+        "time": "4pm - 9am",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Giant snakehead",
+        "location": "Pond",
+        "shadow_size": 4,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug"
+        ]
+    },
+    {
+        "name": "Bluegill",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Yellow perch",
+        "location": "River",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Black bass",
+        "location": "River",
+        "shadow_size": 4,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Tilapia",
+        "location": "River",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Pike",
+        "location": "River",
+        "shadow_size": 5,
+        "time": "All day",
+        "months_available": [
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Pond smelt",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Sweetfish",
+        "location": "River",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Cherry salmon",
+        "location": "River (Clifftop)",
+        "shadow_size": 3,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Char",
+        "location": "River (Clifftop) Pond",
+        "shadow_size": 3,
+        "time": "4pm - 9am (Mar-Jun)",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Char",
+        "location": "River (Clifftop) Pond",
+        "shadow_size": 3,
+        "time": "All day (Sep-Nov)",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Golden trout",
+        "location": "River (Clifftop)",
+        "shadow_size": 3,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Stringfish",
+        "location": "River (Clifftop)",
+        "shadow_size": 5,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Salmon",
+        "location": "River (Mouth)",
+        "shadow_size": 4,
+        "time": "All day",
+        "months_available": [
+            "Sep"
+        ]
+    },
+    {
+        "name": "King salmon",
+        "location": "River (Mouth)",
+        "shadow_size": 5,
+        "time": "All day",
+        "months_available": [
+            "Sep"
+        ]
+    },
+    {
+        "name": "Mitten crab",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Guppy",
+        "location": "River",
+        "shadow_size": 1,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Nibble fish",
+        "location": "River",
+        "shadow_size": 1,
+        "time": "9am - 4pm",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Angelfish",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "4pm - 9am",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Betta",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "9am - 4pm",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Neon tetra",
+        "location": "River",
+        "shadow_size": 1,
+        "time": "9am - 4pm",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Rainbowfish",
+        "location": "River",
+        "shadow_size": 1,
+        "time": "9am - 4pm",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Piranha",
+        "location": "River",
+        "shadow_size": 2,
+        "time": "9am - 4pm & 9pm - 4am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Arowana",
+        "location": "River",
+        "shadow_size": 4,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Dorado",
+        "location": "River",
+        "shadow_size": 5,
+        "time": "4am - 9pm",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Gar",
+        "location": "Pond",
+        "shadow_size": 5,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Arapaima",
+        "location": "River",
+        "shadow_size": 6,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Saddled bichir",
+        "location": "River",
+        "shadow_size": 4,
+        "time": "9pm - 4am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Sturgeon",
+        "location": "River (Mouth)",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Sea butterfly",
+        "location": "Sea",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Sea horse",
+        "location": "Sea",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Clown fish",
+        "location": "Sea",
+        "shadow_size": 1,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Surgeonfish",
+        "location": "Sea",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Butterfly fish",
+        "location": "Sea",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Napoleonfish",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "4am - 9pm",
+        "months_available": [
+            "Jul",
+            "Aug"
+        ]
+    },
+    {
+        "name": "Zebra turkeyfish",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Blowfish",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "9pm - 4am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Puffer fish",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Anchovy",
+        "location": "Sea",
+        "shadow_size": 2,
+        "time": "4am - 9pm",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Horse mackerel",
+        "location": "Sea",
+        "shadow_size": 2,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Barred knifejaw",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Sea bass",
+        "location": "Sea",
+        "shadow_size": 5,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Red snapper",
+        "location": "Sea",
+        "shadow_size": 4,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Dab",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Olive flounder",
+        "location": "Sea",
+        "shadow_size": 5,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Squid",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Moray eel",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Ribbon eel",
+        "location": "Sea",
+        "shadow_size": 3,
+        "time": "All day",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Tuna",
+        "location": "Pier",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Blue marlin",
+        "location": "Pier",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Giant trevally",
+        "location": "Pier",
+        "shadow_size": 5,
+        "time": "All day",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Mahi-mahi",
+        "location": "Pier",
+        "shadow_size": 5,
+        "time": "All day",
+        "months_available": [
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct"
+        ]
+    },
+    {
+        "name": "Ocean sunfish",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "4am - 9pm",
+        "months_available": [
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Ray",
+        "location": "Sea",
+        "shadow_size": 5,
+        "time": "4am - 9pm",
+        "months_available": [
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov"
+        ]
+    },
+    {
+        "name": "Saw shark",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Hammerhead shark",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Great white shark",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Whale shark",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Suckerfish",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep"
+        ]
+    },
+    {
+        "name": "Football fish",
+        "location": "Sea",
+        "shadow_size": 4,
+        "time": "4pm - 9am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Oarfish",
+        "location": "Sea",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Barreleye",
+        "location": "Sea",
+        "shadow_size": 2,
+        "time": "9pm - 4am",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    {
+        "name": "Coelacanth",
+        "location": "Sea (Rain)",
+        "shadow_size": 6,
+        "time": "All day",
+        "months_available": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    }
+]

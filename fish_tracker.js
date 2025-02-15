@@ -111,10 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fetchFishData();
     }
 
-    const resetButton = document.createElement("button");
-    resetButton.textContent = "Reset Donated Fish";
-    resetButton.addEventListener("click", resetDonatedFish);
-    document.body.insertBefore(resetButton, fishList);
+    if (fishList) {
+        const resetButton = document.createElement("button");
+        resetButton.textContent = "Reset Donated Fish";
+        resetButton.addEventListener("click", resetDonatedFish);
+        fishList.parentNode.insertBefore(resetButton, fishList);
+    }
 
     fetchFishData();
 });

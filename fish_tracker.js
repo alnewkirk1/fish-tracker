@@ -26,35 +26,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return fish.months_available.includes(currentMonth) && !fish.months_available.includes(months[monthIndex + 1]);
     }
 
-	function isFishAvailableNow(fish) {
-		const currentHour = getCurrentHour();
-		console.log(`🕒 Current Hour: ${currentHour}`);
-		
-		if (fish.time === "All day") return true;
-
-		const timeRanges = fish.time.split(" & "); // Handle cases like "9am - 4pm & 9pm - 4am"
-		return timeRanges.some(range => {
-			const [start, end] = range.split(" - ").map(t => {
-				let hour = parseInt(t.replace(/\D/g, ""), 10);
-				if (t.includes("pm") && hour !== 12) hour += 12;
-				if (t.includes("am") && hour === 12) hour = 0;
-				return hour;
-			});
-
-			console.log(`Checking Fish: ${fish.name}, Available Time: ${fish.time}, Converted Start: ${start}, End: ${end}`);
-
-			// Handle time ranges that cross midnight (e.g., 4pm - 9am)
-			if (start > end) {
-				const isAvailable = currentHour >= start || currentHour < end;
-				console.log(`🌙 Nighttime Fish (${fish.name}) Availability: ${isAvailable}`);
-				return isAvailable;
-			}
-
-			const isAvailable = currentHour >= start && currentHour < end;
-			console.log(`🌞 Daytime Fish (${fish.name}) Availability: ${isAvailable}`);
-			return isAvailable;
-		});
-	}
+    function isFishAvailableNow(fish) {
+        const currentHour = getCurrentHour();
+        if (fish.time === "All day") return true;
+        
+        const timeRanges = fish.time.split(" & "); // Handle cases like "9am - 4pm & 9pm - 4am"
+        return timeRanges.some(range => {
+            const [start, end] = range.split(" - ").map(t => {
+                let hour = parseInt(t.replace(/\D/g, ""), 10);
+                if (t.includes("pm") && hour !== 12) hour += 12;
+                if (t.includes("am") && hour === 12) hour = 0;
+                return hour;
+            });
+            
+            if (start > end) {
+                return currentHour >= start || currentHour < end;
+            }
+            return currentHour >= start && currentHour < end;
+        });
+    }
 
     function fetchFishData() {
         fetch("fish_data_complete.json")
@@ -72,18 +62,30 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentMonthShort = getShortMonth(currentMonthFull);
         console.log("Current Month (Short):", currentMonthShort);
 
+        const sortedFish = {};
+        
         fishData.forEach(fish => {
-            console.log("Checking Fish:", fish.name, "Available Months:", fish.months_available, "Time:", fish.time);
             if (fish.months_available.includes(currentMonthShort) && isFishAvailableNow(fish) && !donatedFish.includes(fish.name)) {
-                console.log("✅ Displaying Fish Now:", fish.name);
+                if (!sortedFish[fish.location]) {
+                    sortedFish[fish.location] = [];
+                }
+                sortedFish[fish.location].push(fish);
+            }
+        });
+
+        Object.keys(sortedFish).forEach(location => {
+            const locationHeader = document.createElement("h2");
+            locationHeader.textContent = location;
+            fishList.appendChild(locationHeader);
+
+            sortedFish[location].forEach(fish => {
                 const listItem = document.createElement("li");
                 listItem.innerHTML = `
                     <input type="checkbox" id="${fish.name}">
                     <label for="${fish.name}" class="${isLeavingThisMonth(fish) ? 'leaving' : ''}">
-                        ${fish.name} - ${fish.location} (${fish.time})
+                        ${fish.name} - ${fish.time}
                     </label>
                 `;
-
                 listItem.querySelector("input").addEventListener("change", (event) => {
                     if (event.target.checked) {
                         donatedFish.push(fish.name);
@@ -96,13 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("donatedFish", JSON.stringify(donatedFish));
                     renderFishList(fishData);
                 });
-
                 fishList.appendChild(listItem);
-            } else {
-                console.log("❌ Hiding Fish:", fish.name);
-            }
+            });
         });
-        console.log("Fish List Rendered!");
     }
 
     function resetDonatedFish() {
